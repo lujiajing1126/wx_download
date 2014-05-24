@@ -25,7 +25,7 @@
                         else if (parseInt(version.charAt(4)) < parseInt(_Critical_Version.charAt(4)))
                             return false;
                         else
-                            return false;
+                            return true;
                     }
                 }
             }
@@ -34,6 +34,7 @@
     //document.writeln(_WX ? "WEIXIN" : "NOT_WEIXIN");
     //document.writeln(_Android ? "Android" : "NOT_Android");
     //document.writeln(_iOS ? "iOS" : "NOT_iOS");
+    //document.writeln(_Current_Version);
     $(document).on('click.dl', 'a#download', function() {
         // 如果版本高低判断有错的话直接_WX判断是否是微信
         if (_WX && _Version_Latter || _DEBUG) {
